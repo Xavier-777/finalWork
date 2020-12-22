@@ -14,6 +14,7 @@ public class hbaseExample {
     //主函数中的语句请逐句执行，只需删除其前的//即可，如：执行insertRow时请将其他语句注释
     public static void main(String[] args) throws IOException {
         //创建一个表，表名为Score，列族为sname,course
+        //********************hbase表******************//
         //createTable("priMapping", new String[]{"fileName", "priKey"});
 
         //在Score表中插入一条数据，其行键为95001,sname为Mary（因为sname列族下没有子列所以第四个参数为空）
