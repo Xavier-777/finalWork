@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hbase:hbase-annotations:1.4.13">
+    <CLASSES>
+      <root url="jar://D:/maven-3.6.3/repository/org/apache/hbase/hbase-annotations/1.4.13/hbase-annotations-1.4.13.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/maven-3.6.3/repository/org/apache/hbase/hbase-annotations/1.4.13/hbase-annotations-1.4.13-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/maven-3.6.3/repository/org/apache/hbase/hbase-annotations/1.4.13/hbase-annotations-1.4.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
