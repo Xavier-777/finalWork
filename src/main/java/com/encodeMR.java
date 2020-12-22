@@ -22,7 +22,7 @@ import java.io.IOException;
 import static com.utils.sm2.SM2EncDecUtils.generateKeyPair;
 
 /**
- * 加密
+ * 用MR加密
  */
 public class encodeMR {
 
@@ -42,6 +42,7 @@ public class encodeMR {
 
     public static class encodeReducer extends Reducer<LongWritable, Text, LongWritable, Text> {
         Text text = new Text();
+
         @Override
         protected void reduce(LongWritable key, Iterable<Text> values, Context context)
                 throws IOException, InterruptedException {
@@ -58,7 +59,7 @@ public class encodeMR {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException, IOException, ClassNotFoundException {
+    public static void Driver() throws Exception {
         Configuration conf = new Configuration();
         Long startTime, endTime, usedTime = null;
 
@@ -106,5 +107,13 @@ public class encodeMR {
         endTime = System.currentTimeMillis();
         usedTime = (endTime - startTime) / 1000;
         System.out.println("加密文件到hdfs完成,用时:" + usedTime + "s");
+    }
+
+    public static void main(String[] args) {
+        try {
+            encodeMR.Driver();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

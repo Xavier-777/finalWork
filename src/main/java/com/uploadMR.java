@@ -18,7 +18,9 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import java.io.IOException;
 
-
+/**
+ * 用MR上传文件
+ */
 public class uploadMR {
     private static String localPath = "G:\\haha.txt";//本地原生txt文件
     private static String url = "hdfs://192.168.43.122:9000";
@@ -50,7 +52,7 @@ public class uploadMR {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException, IOException, ClassNotFoundException {
+    public static void Driver()throws Exception{
         Configuration conf = new Configuration();
         Long startTime, endTime, usedTime = null;
 
@@ -86,5 +88,13 @@ public class uploadMR {
         endTime = System.currentTimeMillis();
         usedTime = (endTime - startTime) / 1000;
         System.out.println("上传文件到hdfs用时：:" + usedTime + "s");
+    }
+
+    public static void main(String[] args){
+        try {
+            uploadMR.Driver();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

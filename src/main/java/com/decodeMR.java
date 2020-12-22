@@ -17,7 +17,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 
 /**
- * 解密
+ * 用MR解密
  */
 public class decodeMR {
     private static String url = "hdfs://192.168.43.122:9000";
@@ -49,7 +49,7 @@ public class decodeMR {
         }
     }
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
+    public static void Driver() throws Exception{
         Configuration conf = new Configuration();
         Long startTime, endTime, usedTime = null;
 
@@ -88,5 +88,13 @@ public class decodeMR {
         endTime = System.currentTimeMillis();
         usedTime = (endTime - startTime) / 1000;
         System.out.println("解密到hdfs中完成,用时:" + usedTime + "s");
+    }
+
+    public static void main(String[] args) {
+        try {
+            decodeMR.Driver();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

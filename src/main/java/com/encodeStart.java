@@ -11,6 +11,9 @@ import java.io.IOException;
 
 import static com.utils.sm2.SM2EncDecUtils.generateKeyPair;
 
+/**
+ * 普通方法解密
+ */
 public class encodeStart {
     private static String localPath = "src/main/java/haha.txt";//本地原生txt文件
     private static String hdfsPath = "/user/hadoop/haha.txt";//原生txt上传到hdfs

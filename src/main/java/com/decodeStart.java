@@ -11,6 +11,9 @@ import java.io.IOException;
 
 import static com.utils.sm2.SM2EncDecUtils.generateKeyPair;
 
+/**
+ * 普通方法解密
+ */
 public class decodeStart {
     private static String hdfsCipher="/user/hadoop/haha_cipherText.txt";
     private static String getFromhdfsFile="src/main/java/getFromHdfs.txt";//从hdfs获取原生txt
